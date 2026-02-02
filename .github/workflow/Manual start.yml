@@ -1,0 +1,32 @@
+name: Manual Workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  Job1:
+    name: PowerShell Job 1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 Run PowerShell
+        shell: pwsh
+        run: |
+          Write-Host "Step 1"
+          exit 0
+          
+      - name: Step 2 Run PowerShell
+        shell: pwsh
+        run: |
+          Write-Host "Step 2"
+          exit 0
+
+  Job2:
+    name: PowerShell Job 2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 Run PowerShell Job 2
+        shell: pwsh
+        run: |
+          Write-Host "Step 1 in Job 2"
+          exit 0
